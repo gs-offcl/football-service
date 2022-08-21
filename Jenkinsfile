@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Pre-Deploy-check') {
             steps {
-                echo '****************************** remove existing ***************************************'
+                echo '****************************** Remove running container ***************************************'
                 script {
                    //containerID = bat (returnStdout: true, script:'docker container ls --all | grep -w c_football-service | awk "{print $1}"')
                    containerID = powershell(returnStdout: true, script:'docker ps -af name=c_football-service --format "{{.ID}}"')
