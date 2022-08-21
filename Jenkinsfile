@@ -24,9 +24,9 @@ pipeline {
             steps {
                 echo '****************************** remove existing ***************************************'
                 script {
-                   containerID = bat (returnStdout: true, script:'docker container ls --all | grep -w c_football-service | awk "{print $1}"')
-                   if(containerID)
-				   {
+                   //containerID = bat (returnStdout: true, script:'docker container ls --all | grep -w c_football-service | awk "{print $1}"')
+                   containerID = powershell(returnStdout: true, script:'docker ps -af name=c_football-service --format "{{.ID}}"')
+                   if(containerID) {
               		 bat "docker stop ${containerID}"
 			   		 bat "docker rm -f ${containerID}"
 			       }
