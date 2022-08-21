@@ -67,7 +67,7 @@ Configure job in Jenkins and run pipeline
 ## Sequence Diagram
 
 ```
-[!([Football_SD.png](https://github.com/gs-offcl/football-service/blob/main/Football_SD.jpg)
+https://github.com/gs-offcl/football-service/blob/main/Football_SD.jpg
 ```
 
 ## Copyright
