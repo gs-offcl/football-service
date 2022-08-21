@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo '****************************** remove existing ***************************************'
                 script {
-                   containerID = sh (returnStdout: true, script:'docker container ls --all | grep -w c_football-service | awk "{print $1}"')
+                   containerID = bat (returnStdout: true, script:'docker container ls --all | grep -w c_football-service | awk "{print $1}"')
                    if(containerID)
 				   {
               		 bat "docker stop ${containerID}"
