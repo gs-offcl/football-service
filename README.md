@@ -1,5 +1,7 @@
 # Football Standing Micro service
 
+## Problem:
+
 Description:
 
 Develop, Test and Deploy a Microservice to find standings of a team playing league football match using country name, league name and team name;
@@ -9,32 +11,32 @@ Develop, Test and Deploy a Microservice to find standings of a team playing leag
 • The solution should support offline mode with toggles
 • The service should return relevant results as expected, even while the underlying dependencies (Ex: Public API) are not available!
 
-# API Data Sources
+API Sources
 
 API: https://apifootball.com/documentation/#Standings
 Key: <API_KEY>
 Documentation: https://apifootball.com/documentation/
 
-# Expected output
+Expected output
 
 Country ID & Name: (<ID>) - <name>
 League ID & Name: (<ID>) - <name>
 Team ID & Name: (<ID>) - <name>
 Overall League Position: <position>
 
-Solution:
+## Solution:
 
-## Requirements
+Requirements
 
 For building and running the application you need:
 
-- [Spring Boot](http://projects.spring.io/spring-boot/) sample service.
+- [Spring Boot](http://projects.spring.io/spring-boot/) service.
 - [JDK 11](https://adoptium.net/temurin/releases?version=11)
 - [Maven 3.x](https://maven.apache.org)
 - [Docker](https://www.docker.com/)
 - [JENKINS](CI-CD)
 
-## Running the application locally
+## How to run application
 
 There are several ways to run a Spring Boot application on your local machine. 
 
