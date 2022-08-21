@@ -1,0 +1,14 @@
+#Ignore the logs directory
+src/
+
+#Ignoring
+.mvn
+.settings
+.dbeaver
+.project
+.gitignore
+.classpath
+
+#Ignoring all the markdown and class files
+*.md
+**/*.class

@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "football.api.key",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.key'"
+  },
+  {
+    "name": "football.api.url",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.url'"
+  },
+  {
+    "name": "football.api.action",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.action'"
+  },
+  {
+    "name": "football.api.readTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.readTimeout'"
+  },
+  {
+    "name": "football.api.connectTimeout",
+    "type": "java.lang.String",
+    "description": "A description for 'football.api.connectTimeout'"
+  }
+]}
