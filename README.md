@@ -73,6 +73,28 @@ Configure job in Jenkins and run pipeline
 
 ```
 
+## NFR test using Jmeter
+
+```
+ ![football-service](football-service.jmx)
+ 
+ number of threads(users) - 10
+ ram up time - 15
+ 
+Label				# Samples	Average	Median	90% Line	95% Line	99% Line	Min		Max		Error 	% Throughput Received KB/sec	Sent KB/sec
+football-sevice-api	10			1436	1384	1682		1682		1927		1135	1927	0.00%	0.67191		 0.24				0.13
+TOTAL				10			1436	1384	1682		1682		1927		1135	1927	0.00%	0.67191		 0.24				0.13
+
+
+ number of threads(users) - 10
+ ram up time - 30
+ 
+Label				# Samples	Average	Median	90% Line	95% Line	99% Line	Min		Max		Error %	Throughput	Received KB/sec	Sent KB/sec
+football-sevice-api	10			1447	1258	1821		1821		2004		1025	2004	0.00%	0.34478		0.13			0.07
+TOTAL				10			1447	1258	1821		1821		2004		1025	2004	0.00%	0.34478		0.13			0.07
+
+```
+
 ## Copyright
 
 Released under the Apache License 2.0. See the [LICENSE]
