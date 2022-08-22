@@ -11,22 +11,22 @@ import com.football.league.client.FootballRestClient;
 import com.football.league.dto.TeamStandingRequest;
 import com.football.league.dto.TeamStandingResponse;
 import com.football.league.exception.FootballException;
-import com.football.league.service.FootballService;
+import com.football.league.facade.FootballFacade;
 
 import javax.validation.Valid;
 
 @Slf4j
 @RestController
-public class FootballController implements Football {
+public class FootballController implements IFootball {
 
 	private static Logger logger = LoggerFactory.getLogger(FootballRestClient.class);
 
 	@Autowired
-	FootballService footballService;
+	FootballFacade footballFacade;
 
 	public TeamStandingResponse  getTeamStandings(@Valid TeamStandingRequest teamRequest) throws FootballException {
 		logger.debug(" TeamStandingRequest : {}", teamRequest.toString());
-		TeamStandingResponse teamResponse = footballService.getTeamStandings(teamRequest);
+		TeamStandingResponse teamResponse = footballFacade.getTeamStandings(teamRequest);
 		logger.debug(" TeamStandingResponse : {}", teamResponse.toString());
 		return teamResponse;
 	}

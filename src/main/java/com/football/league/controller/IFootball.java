@@ -12,9 +12,9 @@ import com.football.league.exception.FootballException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Tag(name = "football", description = "the football API")
+@Tag(name = "football", description = "The Football League API")
 @RequestMapping("/api/v1")
-public interface Football {
+public interface IFootball {
 
 	@Operation(summary = "Get football standings", description = "Returns football standings", tags = { "football" })  
 	@GetMapping(path = "/teams/standing")

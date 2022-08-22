@@ -14,10 +14,10 @@ import com.football.league.client.FootballRestClient;
 import com.football.league.controller.FootballController;
 import com.football.league.dto.TeamStandingRequest;
 import com.football.league.dto.TeamStandingResponse;
+import com.football.league.facade.FootballFacade;
 import com.football.league.model.Country;
 import com.football.league.model.League;
 import com.football.league.model.TeamStanding;
-import com.football.league.service.FootballService;
 
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -38,7 +38,7 @@ public class FootballApplicationTests {
 	FootballController footballController;
 
 	@Autowired
-	FootballService footballService;
+	FootballFacade footballFacade;
 
 	@Autowired
 	FootballRestClient footballRestClient;
@@ -75,7 +75,7 @@ public class FootballApplicationTests {
 		TeamStandingResponse response1 = footballController.getTeamStandings(requestValid);
 		assertNotNull(response1);
 		
-		TeamStandingResponse response2 = footballService.getTeamStandings(requestValid);
+		TeamStandingResponse response2 = footballFacade.getTeamStandings(requestValid);
 		assertNotNull(response2);
 	}
 
