@@ -69,7 +69,7 @@ Configure job in Jenkins and run pipeline
 ## Sequence Diagram
 
 ```
- ![Football_SD](Football_SD.jpg)
+ ![Football_SD_v2](Football_SD_v2.jpg)
 
 ```
 
