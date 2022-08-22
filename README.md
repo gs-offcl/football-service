@@ -62,9 +62,9 @@ docker build -t football-service:1.0.0 --no-cache -f Dockerfile .
 docker container run --name c_football-service -d -p 8080:8080 -t football-service:1.0.0
 ```
 
-## CI-CD Pipeline
+## CI-CD Pipeline implemented
 
-Configure job in Jenkins and run pipeline
+Configure job for Jenkinsfile and run pipeline
 
 ## Sequence Diagram
 
@@ -72,8 +72,33 @@ Configure job in Jenkins and run pipeline
  ![Football_SD_v2](Football_SD_v2.jpg)
 
 ```
+## OPEN API Documentation
 
-## NFR test using Jmeter
+http://localhost:8080/api-docs/
+
+SWAGGER UI:
+
+http://localhost:8080/swagger-ui/index.html#/football/getTeamStandings
+
+## API Test
+
+Sample Request:
+
+{
+  "countryName": "England",
+  "leagueName": "Non League Premier",
+  "teamName": "Aveley"
+}
+
+## Design Patterns:
+
+	Singleton Bean, Facade, Controller, RestTemplate..etc 
+
+## SOLID, 12 factor principles followed 
+
+## Design Tools used: draw.io
+
+## NFR/Performance test using JMeter
 
 ```
  ![football-service](football-service.jmx)
