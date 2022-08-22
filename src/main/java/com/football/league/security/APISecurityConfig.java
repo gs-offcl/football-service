@@ -43,7 +43,7 @@ public class APISecurityConfig {
         authenticationManagerBuilder.userDetailsService(userDetailsService);
         authenticationManager = authenticationManagerBuilder.build();
 
-        http.csrf().disable().cors().disable().authorizeHttpRequests().antMatchers("/api/v1/**").permitAll()
+        http.csrf().disable().cors().disable().authorizeHttpRequests().antMatchers("/**").permitAll()
             .anyRequest().authenticated()
             .and()
             .authenticationManager(authenticationManager)
